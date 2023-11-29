@@ -1,0 +1,9 @@
+node --version
+
+npm --version 
+
+npm config set proxy http://proxy.iutn.univ-poitiers.fr:3128 
+
+npm install browser-sync -save-dev 
+
+pip install --proxy http://proxy.iutn.univ-poitiers.fr:3128 folium
