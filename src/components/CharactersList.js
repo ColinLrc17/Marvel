@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
-import {format} from 'date-fns';
-
+import CharacterDate from './CharacterDate.js';
 
 export function CharactersList({ characters = [] }) {
     return (
@@ -8,7 +7,8 @@ export function CharactersList({ characters = [] }) {
             {characters.map((character) => (
                 <li key={character.id}>
                     <Link to={`/characters/${character.id}`}>
-                        <strong>{character.name}</strong> - <small> {format(new Date(character.modified),"MMMM dd , yyyy")}</small>
+                        <strong>{character.name}</strong> - 
+                        { <CharacterDate character={character} /> }
                     </Link>
                 </li>
             ))}
