@@ -8,10 +8,19 @@ describe('CharactersList', () => {
     it('renders a list of characters', () => {
         // when
         const characters = [
-            { id: 1, name: 'Iron Man' },
-            { id: 2, name: 'Captain America' },
-            { id: 3, name: 'Thor' },
+            { id: 1, name: 'Iron Man',"modified": "2014-01-13T14:48:32-0500", },
+            { id: 2, name: 'Captain America',"modified": "2014-02-13T14:48:32-0500",},
+            { id: 3, name: 'Thor',"modified": "2015-01-13T14:48:32-0500", },
         ];
+        // expect each listitem to have the character name, a link to the character detail page, and the modified date
+        characterItems.forEach((item, index) => {
+            const linkElement = within(item).getByRole('link', { name: characters[index].name });
+            expect(linkElement).toBeInTheDocument();
+            expect(linkElement).toHaveAttribute('href', `/characters/${characters[index].id}`);
+        
+            const dateElement = within(item).getByText(format(new Date(characters[index].modified),"MMMM dd , yyyy"));
+            expect(dateElement).toBeInTheDocument();
+        });
 
         // then
         render(<CharactersList characters={characters} />, { wrapper: BrowserRouter });

@@ -4,7 +4,7 @@ import { useLoaderData } from 'react-router';
 import CharacterDetail from '../components/CharacterDetail';
 import D3PieChart from '../components/D3PieChart';
 import RechartsPieChart from '../components/RechartsPieChart';
-// import RechartsPieChart from '../components/RechartsPieChart';
+
 
 const CharacterDetailPage = () => {
     // retrieve the character using the useLoaderData hook
