@@ -2,7 +2,8 @@
 # Git
 
 ### Quel est l'intérêt de commiter régulièrement et de manière atomique ?
-De pouvoir sauvegarder son travail régulièrement 
+
+- De pouvoir sauvegarder son travail régulièrement 
 
 ### A quoi sert une branche de type feature dans un développement logiciel de type git flow ?
 
