@@ -3,6 +3,7 @@ import React from 'react';
 import { useLoaderData } from 'react-router';
 import CharacterDetail from '../components/CharacterDetail';
 import D3PieChart from '../components/D3PieChart';
+import RechartsPieChart from '../components/RechartsPieChart';
 // import RechartsPieChart from '../components/RechartsPieChart';
 
 const CharacterDetailPage = () => {
@@ -23,7 +24,7 @@ const CharacterDetailPage = () => {
                 </div>
                 <div style={{flex: '50%'}}>
                     <h3>Using Recharts</h3>
-                    {/* <RechartsPieChart data={character.capacities} /> */}
+                    { <RechartsPieChart data={character.capacities} /> }
                 </div>
             </div>
         </>
