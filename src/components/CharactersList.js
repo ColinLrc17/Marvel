@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import CharacterDate from './CharacterDate.js';
 
 export function CharactersList({ characters = [] }) {
     return (
@@ -6,7 +7,8 @@ export function CharactersList({ characters = [] }) {
             {characters.map((character) => (
                 <li key={character.id}>
                     <Link to={`/characters/${character.id}`}>
-                        {character.name}
+                        <strong>{character.name}</strong> - 
+                        { <CharacterDate character={character} /> }
                     </Link>
                 </li>
             ))}

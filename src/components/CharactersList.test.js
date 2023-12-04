@@ -8,10 +8,12 @@ describe('CharactersList', () => {
     it('renders a list of characters', () => {
         // when
         const characters = [
-            { id: 1, name: 'Iron Man' },
-            { id: 2, name: 'Captain America' },
-            { id: 3, name: 'Thor' },
+            { id: 1, name: 'Iron Man',"modified": "2014-01-13T14:48:32-0500", },
+            { id: 2, name: 'Captain America',"modified": "2014-02-13T14:48:32-0500",},
+            { id: 3, name: 'Thor',"modified": "2015-01-13T14:48:32-0500", },
         ];
+        // expect each listitem to have the character name, a link to the character detail page, and the modified date
+
 
         // then
         render(<CharactersList characters={characters} />, { wrapper: BrowserRouter });
