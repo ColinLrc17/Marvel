@@ -1,3 +1,4 @@
+# Colin Laurençon BUT SD3
 # Git
 
 ### Quel est l'intérêt de commiter régulièrement et de manière atomique ?
@@ -44,7 +45,7 @@ De pouvoir sauvegarder son travail régulièrement
 
 ### A quoi sert une version release candidate ?
 
-- c'est une version livrable prêt à être utiliser
+- c'est la première version proposée pour un premier livrable
 
 # test
 
