@@ -23,7 +23,7 @@
 # composant
 
 ### Quel est l'intérêt de découper une application en composants ?
-- On évite les redondances et on rend le code plus lisible et on peut les réustilliser si nécessaire plus tard 
+- On évite les redondances et on rend le code plus lisible et on peut les réutilliser si nécessaire plus tard 
 
 # test
 
@@ -38,6 +38,7 @@
 
 ### Quel est le but d'un mock ?
 
+- il permet simuler le projet 
 
 # documentation
 

@@ -69,14 +69,14 @@ const CompareCharactersPage = () => {
                 {characters[option1.value].name} vs {characters[option2.value].name}
             </p>
             <p style={centerStyle}>
-            <img src={`${option1.Image}/standard_large.${option1.Extension}`} alt={option1.name} />
-            <img src={`${option2.Image}/standard_large.${option2.Extension}`} alt={option2.name} />
+                <img src={`${option1.Image}/standard_large.${option1.Extension}`} alt={option1.name} />
+                <img src={`${option2.Image}/standard_large.${option2.Extension}`} alt={option2.name} />
             </p>
             <RadarChart outerRadius={90} width={730} height={250} data={[characters]}>
                 <PolarGrid />
                 <PolarAngleAxis dataKey="name" />
                 <PolarRadiusAxis angle={30} domain={[0, 10]} />
-                <Radar name={option1.name} dataKey={characters.name}  stroke="#8884d8" fill="#8884d8" fillOpacity={0.6} />
+                <Radar name={option1.name} dataKey={option1.name}  stroke="#8884d8" fill="#8884d8" fillOpacity={0.6} />
                 <Radar name={option2.name} dataKey="name" stroke="#82ca9d" fill="#82ca9d" fillOpacity={0.6} />
                 <Legend />
             </RadarChart>
