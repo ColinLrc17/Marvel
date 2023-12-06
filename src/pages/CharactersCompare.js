@@ -1,17 +1,16 @@
 import React from 'react';
+import { useLoaderData } from 'react-router';
+import { CharactersList } from "../components/CharactersList";
+import { getCharacters } from "../api/character-api";
 
 const CompareCharactersPage = () => {
     // change the title of the page
     document.title = "Compare | Marvel App";
 
     // to be replaced with the real data
-    const characters = [
-        {
-            name: '...'
-        },{
-            name: '...'
-        }
-    ]
+    const characters = getCharacters();
+
+    
 
     // transform the characters to array of label/value objects
     const options = characters.map((character, index) => ({
