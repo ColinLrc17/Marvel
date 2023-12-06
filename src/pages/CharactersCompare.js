@@ -16,6 +16,8 @@ const CompareCharactersPage = () => {
     const options = characters.map((character, index) => ({
         value: index,
         label: character.name,
+        Image : character.thumbnail.path,
+        Extension : character.thumbnail.extension
     }));
 
     // set the default options to the first two characters
@@ -58,6 +60,8 @@ const CompareCharactersPage = () => {
             <p style={centerStyle}>
                 {characters[option1.value].name} vs {characters[option2.value].name}
             </p>
+            <img src={`${option1.Image}/standard_large.${option1.Extension}`} alt={option1.name} />
+            <img src={`${option2.Image}/standard_large.${option2.Extension}`} alt={option2.name} />
         </>
     );
 };
